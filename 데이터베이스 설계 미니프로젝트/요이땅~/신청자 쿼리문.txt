@@ -1,0 +1,13 @@
+create table applicant(
+id varchar2(8) primary key,
+name varchar2(10) not null,
+tel varchar2(11),
+addr number(2));
+
+insert into applicant values('a','김주원','01026578866','광주');
+insert into applicant values('b','이민서','01029987658','서울');
+insert into applicant values('c','최지안','01037886328','부산');
+insert into applicant values('d','김다은','01089569342','서울');
+insert into applicant values('e','박준우','01057364665','제주');
+insert into applicant values('f','변현우','01036697884','여수');
+insert into applicant values('g','박수민','01067557129','천안');
