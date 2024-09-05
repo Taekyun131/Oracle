@@ -48,6 +48,11 @@ on u.id=c.id
 where c.c_num is null;
 
 /*5. 회원수별 등록한 자동차 수를 출력하시오.*/
+
+--select id, count(*) 자동차수
+--from carinfo
+--group by id;
+
 select u.name, c.자동차수
 from users u 
 left outer join(select id, count(*) 자동차수
@@ -57,10 +62,10 @@ on u.id=c.id;
 
 /*6. 2대 이상을 소유한 회원의 이름과 소유한 자동차 수를 출력하시오.*/
 
-select id, count(*) 자동차수
-from carinfo
-group by id
-having count(*)>=2;
+--select id, count(*) 자동차수
+--from carinfo
+--group by id
+--having count(*)>=2;
 
 select u.name, c.자동차수
 from users u, (select id, count(*) 자동차수
