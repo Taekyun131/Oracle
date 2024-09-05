@@ -75,6 +75,12 @@ from users u, (select id, count(*) 자동차수
 where u.id=c.id;
 
 
+select name, count(*)
+from users u,carinfo i
+where u.id=i.id
+group by name
+having count(*)>=2;
+
 
 /*7. 자동차는 등록되어 있는데 소유자가 없는 자동차 번호를 출력하시오.*/
 select c.c_num

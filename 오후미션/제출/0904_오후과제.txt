@@ -57,7 +57,7 @@ on u.id=c.id;
 
 /*6. 2대 이상을 소유한 회원의 이름과 소유한 자동차 수를 출력하시오.*/
 
-select id, count(*) 자동차수
+/*select id, count(*) 자동차수
 from carinfo
 group by id
 having count(*)>=2;
@@ -68,8 +68,13 @@ from users u, (select id, count(*) 자동차수
                 group by id
                 having count(*)>=2) c
 where u.id=c.id;
+*/
 
-
+select name, count(*)
+from users u,carinfo i
+where u.id=i.id
+group by name
+having count(*)>=2;
 
 /*7. 자동차는 등록되어 있는데 소유자가 없는 자동차 번호를 출력하시오.*/
 select c.c_num
