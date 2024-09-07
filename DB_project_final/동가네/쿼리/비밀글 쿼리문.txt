@@ -1,4 +1,4 @@
-REATE TABLE ask(
+CREATE TABLE ask(
 s_id varchar(20),
 id varchar(20),
 i_name varchar(20),

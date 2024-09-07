@@ -1,0 +1,24 @@
+//리뷰 추가 별점 트리거
+delimiter //
+create trigger update_star
+after insert 
+on review
+for each row 
+begin 
+	update goods set star=(select avg(star) from review  where i_num=new.i_num)
+							where i_num=new.i_num;
+end
+delimiter ;
+
+
+//리뷰 삭제 별점 트리거
+delimiter //
+create trigger back_star
+after delete 
+on review
+for each row 
+begin 
+	update goods set star=(select avg(star) from review  where i_num=old.i_num)
+							where i_num=old.i_num;
+end
+delimiter ;

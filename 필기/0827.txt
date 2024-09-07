@@ -68,7 +68,7 @@ table: 행(row)과 열(column)로 구성
 
 		member	>>부모 릴레이션			car>>자식 릴레이션
 		id(기본키)	이름	전번		|	차번호	id(외래키)
-		a		홍	1111		|	1	a
+		a		홍	1111		|	1		a
 
 	constraint fk_id 	foreign key(id) 	references 	member(id)
 		이름지정	자식의 외래키	참조 		부모의 컬럼
