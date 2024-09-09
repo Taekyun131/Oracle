@@ -150,15 +150,4 @@ left outer join(select i.id id, i.c_num 배정_차번호,c.c_name 차이름
 on u.id =t.id;
 
 
-                  
-
-
-
-
-
-
-
-
-
-
 
